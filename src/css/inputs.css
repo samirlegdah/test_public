@@ -1,0 +1,471 @@
+.error {
+  color: #fff;
+  background-color: rgba(255, 128, 128, 0.5);
+  width: 100%;
+  text-align: center;
+  font-weight: 900;
+  padding: 1rem;
+  letter-spacing: 0.5px;
+}
+.collapsable {
+  max-height: 100%;
+}
+.collapsed {
+  max-height: 0;
+  overflow-y: hidden;
+}
+.row.striped {
+  padding-top: 0.4rem;
+  padding-bottom: 0.3rem;
+  align-items: center;
+}
+.row.striped p {
+  margin-bottom: 0;
+}
+.row.striped:hover,
+.row.striped:nth-of-type(even):hover {
+  background-color: #222;
+}
+.p-navbar.p-nav-scrolled {
+  margin-top: 1rem;
+}
+
+.p-sticky-title {
+  position: sticky;
+  top: 0rem;
+  height: 4rem;
+  z-index: 1;
+  background-color: #181b1f;
+}
+.p-sticky-table {
+  position: sticky;
+  top: 3rem;
+  z-index: 2;
+}
+.c-pointer {
+  cursor: pointer;
+}
+
+input.form-control,
+select.form-control {
+  background: transparent;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #888;
+  box-shadow: none;
+  border-radius: 0;
+}
+.row.striped:nth-of-type(even) {
+  background-color: #111;
+}
+
+.truncate {
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.ReactModal__Overlay {
+  z-index: 1000 !important;
+}
+div.ReactModal__Overlay > div.ReactModal__Content {
+  inset: 15% !important;
+}
+div.ReactModal__Overlay {
+  background-color: rgba(0, 0, 0, 0.5) !important;
+}
+div.ReactModal__Overlay > div.ReactModal__Content {
+  background-color: #111 !important;
+}
+
+div.ReactModal__Overlay > div.ReactModal__Content.dialog {
+  position: absolute;
+  inset: 30% !important;
+  border: 1px solid rgb(204, 204, 204);
+  /* background: rgb(255, 255, 255); */
+  overflow: auto;
+  border-radius: 4px;
+  outline: none;
+  padding: 20px;
+}
+div.ReactModal__Overlay > div.ReactModal__Content.dialog-long {
+  position: absolute;
+  /* inset: 20% !important; */
+  margin: 5% 10%;
+
+  border: 1px solid rgb(204, 204, 204);
+  /* background: rgb(255, 255, 255); */
+  overflow: auto;
+  border-radius: 4px;
+  outline: none;
+  padding: 20px;
+}
+div.ReactModal__Overlay > div.ReactModal__Content.dialog-large {
+  position: absolute;
+  inset: 10% !important;
+  border: 1px solid rgb(204, 204, 204);
+  /* background: rgb(255, 255, 255); */
+  overflow: auto;
+  border-radius: 4px;
+  outline: none;
+  padding: 20px;
+}
+
+div.ReactModal__Overlay > div.ReactModal__Content.dialog-large .scrollable {
+  max-height: 30vh;
+  overflow-y: auto;
+}
+
+.chart-row {
+  min-height: 28vh;
+}
+.move-up,
+.move-down {
+  position: absolute;
+  display: none;
+  z-index: 100;
+  max-height: 1rem;
+  padding: 0;
+  border-width: 0;
+  margin-left: 40%;
+  width: 20%;
+}
+.move-up > i,
+.move-down > i {
+  transform: translateY(-4px);
+}
+.move-down {
+  top: 100%;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+.move-up {
+  bottom: 100%;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.row:hover > .move-up,
+.row:hover > .move-down {
+  display: block;
+}
+.autocomplete > div > div.wrapper {
+  border-bottom: 1px solid #888;
+}
+
+/* recover bootstrap */
+.form-control {
+  display: block;
+  width: 100%;
+  height: 45px;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857;
+  color: #eee;
+  background-color: #111 !important;
+  background-image: none;
+  border: 1px solid #333;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 1px rgb(0 0 0 / 8%);
+  box-shadow: inset 0 1px 1px rgb(0 0 0 / 8%);
+  -webkit-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+  -o-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+  transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+}
+
+/* BUTTONS */
+.btn-block {
+  display: block;
+  width: 100%;
+}
+.btn-info {
+  background-color: #4d8420;
+}
+.btn-group {
+  position: relative;
+  display: flex;
+  vertical-align: middle;
+  justify-content: center;
+}
+
+/* GENERIC */
+.px-0,
+.pl-0 {
+  padding-left: 0;
+}
+.px-0,
+.pr-0 {
+  padding-right: 0;
+}
+.pt-1 {
+  padding-top: 0.25rem;
+}
+.pl-1,
+.px-1 {
+  padding-left: 0.25rem;
+}
+.pr-1,
+.px-1 {
+  padding-right: 0.25rem;
+}
+.pt-2 {
+  padding-top: 0.5rem;
+}
+.pt-3,
+.py-3 {
+  padding-top: 1rem;
+}
+.pb-3,
+.py-3 {
+  padding-bottom: 1rem;
+}
+.pb-2 {
+  padding-bottom: 0.5rem;
+}
+.pt-4 {
+  padding-top: 2rem;
+}
+.m-0,
+.mb-0 {
+  margin-bottom: 0;
+}
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+.m-0,
+.mt-0 {
+  margin-top: 0;
+}
+.mt-2 {
+  margin-top: 0.5rem;
+}
+.ml-2,
+.mx-2 {
+  margin-left: 0.5rem;
+}
+.mr-2,
+.mx-2 {
+  margin-right: 0.5rem;
+}
+.mt-3,
+.my-3 {
+  margin-top: 1rem;
+}
+.mb-3,
+.my-3 {
+  margin-bottom: 1rem;
+}
+.ml-3,
+.mx-3 {
+  margin-left: 1rem;
+}
+.mr-3,
+.mx-3 {
+  margin-right: 1rem;
+}
+.hidden {
+  display: none !important;
+  visibility: hidden !important;
+}
+.bg-success {
+  background-color: #222;
+}
+.border-bottom {
+  border-bottom: 1px;
+}
+.border-light {
+  border-color: #888;
+}
+.border-1 {
+  border: 2px solid;
+  border-color: #6e9fff66;
+}
+.border-2 {
+  border: 2px solid;
+  border-color: #e6e9ee66;
+}
+
+/* DISPLAY / POSITION */
+.p-relative {
+  position: relative;
+}
+.d-flex {
+  display: flex;
+}
+.d-inline {
+  display: inline;
+}
+.w-100 {
+  width: 100%;
+}
+
+/* TEXT UTILS */
+.text-dark {
+  color: rgb(29, 29, 29);
+}
+.text-white {
+  color: #fff;
+}
+.text-justify {
+  text-align: justify !important;
+}
+.text-danger {
+  color: #dc3545 !important;
+}
+.d-block {
+  display: block;
+}
+.bg-secondary {
+  background-color: #333;
+}
+.float-right {
+  float: right;
+}
+.justify-content-between {
+  display: flex;
+  justify-content: space-between;
+}
+.z-100 {
+  z-index: 100;
+}
+.rst__tree {
+  width: 75%;
+  float: left;
+  height: 800px;
+  background-color: #fff;
+}
+.rst__moveHandle,
+.rst__loadingHandle {
+  height: 100%;
+  width: 44px;
+  background: #000000
+    url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MiIgaGVpZ2h0PSI0MiI+PGcgc3Ryb2tlPSIjRkZGIiBzdHJva2Utd2lkdGg9IjIuOSIgPjxwYXRoIGQ9Ik0xNCAxNS43aDE0LjQiLz48cGF0aCBkPSJNMTQgMjEuNGgxNC40Ii8+PHBhdGggZD0iTTE0IDI3LjFoMTQuNCIvPjwvZz4KPC9zdmc+)
+    no-repeat center !important;
+  border: solid #aaa 1px;
+  -webkit-box-shadow: 0 2px 2px -2px;
+  box-shadow: 0 2px 2px -2px;
+  cursor: move;
+  border-radius: 1px;
+  z-index: 1;
+}
+.graphsBlock {
+  margin: 20px 0 20px 0;
+}
+.graphsBlock label {
+  display: inline;
+}
+
+.rst__rowTitle > span {
+  color: #FFFFFF !important;
+}
+
+.rst__row {
+  height: 60px;
+}
+
+.rst__rowLabel {
+  width: 100%;
+  padding-right: 0!important;
+}
+
+.ui.selection.dropdown {
+  min-height: 0!important;
+}
+
+img.ui.avatar.images {
+  background-color: white!important;
+}
+
+.ui.dropdown .menu > .item > .image, .ui.dropdown .menu > .item > img, .ui.dropdown > .text > .image, .ui.dropdown > .text > img {
+  background-color: white!important;
+}
+
+.ui.fluid.dropdown {
+  padding: 10px!important;
+}
+
+.react-contextmenu {
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid rgba(0,0,0,.15);
+  border-radius: .25rem;
+  color: #373a3c;
+  font-size: 16px;
+  margin: 2px 0 0;
+  min-width: 160px;
+  outline: none;
+  opacity: 0;
+  padding: 5px 0;
+  pointer-events: none;
+  text-align: left;
+  transition: opacity 250ms ease !important;
+  left: 150px!important;
+  top: 35px!important;
+}
+
+.react-contextmenu.react-contextmenu--visible {
+  opacity: 1;
+  pointer-events: auto;
+  z-index: 9999;
+}
+
+.react-contextmenu-item {
+  background: 0 0;
+  border: 0;
+  color: #373a3c;
+cursor: pointer;
+  font-weight: 400;
+  line-height: 1.5;
+  padding: 3px 20px;
+  text-align: inherit;
+  white-space: nowrap;
+}
+
+.react-contextmenu-item.react-contextmenu-item--active,
+.react-contextmenu-item.react-contextmenu-item--selected {
+  color: #fff;
+  background-color: #20a0ff;
+  border-color: #20a0ff;
+  text-decoration: none;
+}
+
+.react-contextmenu-item.react-contextmenu-item--disabled,
+.react-contextmenu-item.react-contextmenu-item--disabled:hover {
+  background-color: transparent;
+  border-color: rgba(0,0,0,.15);
+  color: #878a8c;
+}
+
+.react-contextmenu-item--divider {
+  border-bottom: 1px solid rgba(0,0,0,.15);
+  cursor: inherit;
+  margin-bottom: 3px;
+  padding: 2px 0;
+}
+.react-contextmenu-item--divider:hover {
+  background-color: transparent;
+  border-color: rgba(0,0,0,.15);
+}
+
+.react-contextmenu-item.react-contextmenu-submenu {
+padding: 0;
+}
+
+.react-contextmenu-item.react-contextmenu-submenu > .react-contextmenu-item {
+}
+
+.react-contextmenu-item.react-contextmenu-submenu > .react-contextmenu-item:after {
+  content: "▶";
+  display: inline-block;
+  position: absolute;
+  right: 7px;
+}
+
+.example-multiple-targets::after {
+  content: attr(data-count);
+  display: block;
+}
+
+.rst__rowContents{
+  min-width:0px!important;
+}

@@ -1,0 +1,9 @@
+[
+    "avg-profiles.json",
+    "dest-and-areas-analysis.json",
+    "devices.json",
+    "forecasts.json",
+    "heat-pump.json",
+    "photovoltaic.json",
+    "real-time.json"
+]

@@ -1,0 +1,861 @@
+{
+	"annotations": {
+	  "list": [
+		{
+		  "builtIn": 1,
+		  "datasource": "-- Grafana --",
+		  "enable": true,
+		  "hide": true,
+		  "iconColor": "rgba(0, 211, 255, 1)",
+		  "name": "Annotations & Alerts",
+		  "target": {
+			"limit": 100,
+			"matchAny": false,
+			"tags": [],
+			"type": "dashboard"
+		  },
+		  "type": "dashboard"
+		}
+	  ]
+	},
+	"editable": true,
+	"gnetId": null,
+	"graphTooltip": 0,
+	"iteration": 1633517641028,
+	"links": [],
+	"panels": [
+	  {
+		"datasource": "OnlyRead",
+		"fieldConfig": {
+		  "defaults": {
+			"color": {
+			  "mode": "palette-classic"
+			},
+			"custom": {
+			  "axisLabel": "",
+			  "axisPlacement": "auto",
+			  "barAlignment": 0,
+			  "drawStyle": "line",
+			  "fillOpacity": 0,
+			  "gradientMode": "none",
+			  "hideFrom": {
+				"graph": false,
+				"legend": false,
+				"tooltip": false,
+				"viz": false
+			  },
+			  "lineInterpolation": "linear",
+			  "lineWidth": 1,
+			  "pointSize": 5,
+			  "scaleDistribution": {
+				"type": "linear"
+			  },
+			  "showPoints": "auto",
+			  "spanNulls": false,
+			  "stacking": {
+				"group": "A",
+				"mode": "none"
+			  },
+			  "thresholdsStyle": {
+				"mode": "off"
+			  }
+			},
+			"decimals": 2,
+			"mappings": [],
+			"thresholds": {
+			  "mode": "absolute",
+			  "steps": [
+				{
+				  "color": "green",
+				  "value": null
+				},
+				{
+				  "color": "red",
+				  "value": 80
+				}
+			  ]
+			},
+			"unit": "kwatth"
+		  },
+		  "overrides": []
+		},
+		"gridPos": {
+		  "h": 14,
+		  "w": 24,
+		  "x": 0,
+		  "y": 0
+		},
+		"id": 6,
+		"options": {
+		  "legend": {
+			"calcs": [
+			  "sum"
+			],
+			"displayMode": "list",
+			"placement": "bottom"
+		  },
+		  "tooltip": {
+			"mode": "single"
+		  }
+		},
+		"pluginVersion": "7.5.5",
+		"targets": [
+		  {
+			"cacheDurationSeconds": 300,
+			"fields": [
+			  {
+				"jsonPath": "$.data.data[*].ts",
+				"name": "time",
+				"type": "time"
+			  },
+			  {
+				"jsonPath": "$.data.data[*].grf_1",
+				"name": "Energia"
+			  }
+			],
+			"headers": [],
+			"method": "GET",
+			"params": [
+			  [
+				"id",
+				"${ValoreID}"
+			  ],
+			  [
+				"interval",
+				"hour"
+			  ],
+			  [
+				"start",
+				"1546297200000"
+			  ],
+			  [
+				"end",
+				"1577746800000"
+			  ],
+			  [
+				"skipmissing",
+				"0"
+			  ],
+			  [
+				"limitinterval",
+				"1"
+			  ],
+			  [
+				"slots",
+				"3"
+			  ],
+			  [
+				"apiKey",
+				"cf7701e5b12d43f0bd3f622e058a2b7f"
+			  ],
+			  [
+				"getDelta",
+				"true"
+			  ]
+			],
+			"queryParams": "",
+			"refId": "A",
+			"urlPath": "/etl/tempo-valore"
+		  }
+		],
+		"title": "Consumo energetico",
+		"transformations": [],
+		"type": "timeseries"
+	  },
+	  {
+		"aliasColors": {},
+		"bars": true,
+		"dashLength": 10,
+		"dashes": false,
+		"datasource": "OnlyRead",
+		"fieldConfig": {
+		  "defaults": {
+			"unit": "kwatth"
+		  },
+		  "overrides": []
+		},
+		"fill": 1,
+		"fillGradient": 0,
+		"gridPos": {
+		  "h": 11,
+		  "w": 12,
+		  "x": 0,
+		  "y": 14
+		},
+		"hiddenSeries": false,
+		"id": 7,
+		"legend": {
+		  "alignAsTable": false,
+		  "avg": false,
+		  "current": false,
+		  "max": false,
+		  "min": false,
+		  "show": true,
+		  "total": true,
+		  "values": true
+		},
+		"lines": false,
+		"linewidth": 1,
+		"nullPointMode": "null",
+		"options": {
+		  "alertThreshold": true
+		},
+		"percentage": false,
+		"pluginVersion": "8.1.5",
+		"pointradius": 2,
+		"points": false,
+		"renderer": "flot",
+		"seriesOverrides": [],
+		"spaceLength": 10,
+		"stack": true,
+		"steppedLine": false,
+		"targets": [
+		  {
+			"cacheDurationSeconds": 300,
+			"fields": [
+			  {
+				"jsonPath": "$.data.data[*].ts",
+				"name": "time",
+				"type": "time"
+			  },
+			  {
+				"jsonPath": "$.data.data[*].grf_1",
+				"name": "F1"
+			  },
+			  {
+				"jsonPath": "$.data.data[*].grf_2",
+				"name": "F2"
+			  },
+			  {
+				"jsonPath": "$.data.data[*].grf_3",
+				"name": "F3"
+			  }
+			],
+			"headers": [],
+			"method": "GET",
+			"params": [
+			  [
+				"id",
+				"${ValoreID}"
+			  ],
+			  [
+				"interval",
+				"hour"
+			  ],
+			  [
+				"start",
+				"1546297200000"
+			  ],
+			  [
+				"end",
+				"1577746800000"
+			  ],
+			  [
+				"skipmissing",
+				"0"
+			  ],
+			  [
+				"limitinterval",
+				"1"
+			  ],
+			  [
+				"slots",
+				"3"
+			  ],
+			  [
+				"getDelta",
+				"true"
+			  ]
+			],
+			"queryParams": "",
+			"refId": "A",
+			"urlPath": "/etl/fasce-orarie"
+		  }
+		],
+		"thresholds": [],
+		"timeFrom": null,
+		"timeRegions": [],
+		"timeShift": null,
+		"title": "Fasce Orarie val Assoluti",
+		"tooltip": {
+		  "shared": true,
+		  "sort": 0,
+		  "value_type": "individual"
+		},
+		"transformations": [],
+		"type": "graph",
+		"xaxis": {
+		  "buckets": null,
+		  "mode": "time",
+		  "name": null,
+		  "show": true,
+		  "values": []
+		},
+		"yaxes": [
+		  {
+			"$$hashKey": "object:122",
+			"format": "kwatth",
+			"label": null,
+			"logBase": 1,
+			"max": null,
+			"min": null,
+			"show": true
+		  },
+		  {
+			"$$hashKey": "object:123",
+			"format": "short",
+			"label": null,
+			"logBase": 1,
+			"max": null,
+			"min": null,
+			"show": true
+		  }
+		],
+		"yaxis": {
+		  "align": false,
+		  "alignLevel": null
+		}
+	  },
+	  {
+		"aliasColors": {},
+		"bars": true,
+		"dashLength": 10,
+		"dashes": false,
+		"datasource": "OnlyRead",
+		"fill": 1,
+		"fillGradient": 0,
+		"gridPos": {
+		  "h": 11,
+		  "w": 12,
+		  "x": 12,
+		  "y": 14
+		},
+		"hiddenSeries": false,
+		"id": 8,
+		"legend": {
+		  "alignAsTable": false,
+		  "avg": false,
+		  "current": false,
+		  "max": false,
+		  "min": false,
+		  "show": true,
+		  "total": true,
+		  "values": true
+		},
+		"lines": false,
+		"linewidth": 1,
+		"nullPointMode": "null",
+		"options": {
+		  "alertThreshold": true
+		},
+		"percentage": true,
+		"pluginVersion": "8.1.5",
+		"pointradius": 2,
+		"points": false,
+		"renderer": "flot",
+		"seriesOverrides": [],
+		"spaceLength": 10,
+		"stack": true,
+		"steppedLine": false,
+		"targets": [
+		  {
+			"cacheDurationSeconds": 300,
+			"fields": [
+			  {
+				"jsonPath": "$.data.data[*].ts",
+				"name": "time",
+				"type": "time"
+			  },
+			  {
+				"jsonPath": "$.data.data[*].grf_1",
+				"name": "F1"
+			  },
+			  {
+				"jsonPath": "$.data.data[*].grf_2",
+				"name": "F2"
+			  },
+			  {
+				"jsonPath": "$.data.data[*].grf_3",
+				"name": "F3"
+			  }
+			],
+			"headers": [],
+			"method": "GET",
+			"params": [
+			  [
+				"id",
+				"${ValoreID}"
+			  ],
+			  [
+				"interval",
+				"hour"
+			  ],
+			  [
+				"start",
+				"1546297200000"
+			  ],
+			  [
+				"end",
+				"1577746800000"
+			  ],
+			  [
+				"skipmissing",
+				"0"
+			  ],
+			  [
+				"limitinterval",
+				"1"
+			  ],
+			  [
+				"slots",
+				"3"
+			  ],
+			  [
+				"apiKey",
+				"cf7701e5b12d43f0bd3f622e058a2b7f"
+			  ],
+			  [
+				"getDelta",
+				"true"
+			  ]
+			],
+			"queryParams": "",
+			"refId": "A",
+			"urlPath": "/etl/fasce-orarie"
+		  }
+		],
+		"thresholds": [],
+		"timeFrom": null,
+		"timeRegions": [],
+		"timeShift": null,
+		"title": "Fasce Orarie Val Perc",
+		"tooltip": {
+		  "shared": true,
+		  "sort": 0,
+		  "value_type": "individual"
+		},
+		"transformations": [],
+		"type": "graph",
+		"xaxis": {
+		  "buckets": null,
+		  "mode": "time",
+		  "name": null,
+		  "show": true,
+		  "values": []
+		},
+		"yaxes": [
+		  {
+			"$$hashKey": "object:122",
+			"format": "kwatth",
+			"label": null,
+			"logBase": 1,
+			"max": null,
+			"min": null,
+			"show": true
+		  },
+		  {
+			"$$hashKey": "object:123",
+			"format": "short",
+			"label": null,
+			"logBase": 1,
+			"max": null,
+			"min": null,
+			"show": false
+		  }
+		],
+		"yaxis": {
+		  "align": false,
+		  "alignLevel": null
+		}
+	  },
+	  {
+		"datasource": "OnlyRead",
+		"fieldConfig": {
+		  "defaults": {
+			"color": {
+			  "mode": "palette-classic"
+			},
+			"custom": {
+			  "axisLabel": "Energia [KWh]",
+			  "axisPlacement": "auto",
+			  "axisSoftMin": 0,
+			  "fillOpacity": 80,
+			  "gradientMode": "none",
+			  "hideFrom": {
+				"legend": false,
+				"tooltip": false,
+				"viz": false
+			  },
+			  "lineWidth": 1
+			},
+			"decimals": 2,
+			"mappings": [],
+			"thresholds": {
+			  "mode": "absolute",
+			  "steps": [
+				{
+				  "color": "green",
+				  "value": null
+				},
+				{
+				  "color": "red",
+				  "value": 80
+				}
+			  ]
+			},
+			"unit": "none"
+		  },
+		  "overrides": []
+		},
+		"gridPos": {
+		  "h": 7,
+		  "w": 24,
+		  "x": 0,
+		  "y": 25
+		},
+		"id": 10,
+		"options": {
+		  "barWidth": 0.97,
+		  "groupWidth": 0.7,
+		  "legend": {
+			"calcs": [
+			  "sum"
+			],
+			"displayMode": "list",
+			"placement": "bottom"
+		  },
+		  "orientation": "auto",
+		  "showValue": "auto",
+		  "stacking": "none",
+		  "text": {},
+		  "tooltip": {
+			"mode": "single"
+		  }
+		},
+		"pluginVersion": "7.5.5",
+		"targets": [
+		  {
+			"cacheDurationSeconds": 300,
+			"fields": [
+			  {
+				"jsonPath": "$.data.data[*].indice",
+				"name": "time",
+				"type": "string"
+			  },
+			  {
+				"jsonPath": "$.data.data[*].grf_1",
+				"name": "Lun"
+			  },
+			  {
+				"jsonPath": "$.data.data[*].grf_2",
+				"name": "Mar"
+			  },
+			  {
+				"jsonPath": "$.data.data[*].grf_3",
+				"name": "Mer"
+			  },
+			  {
+				"jsonPath": "$.data.data[*].grf_4",
+				"name": "Gio"
+			  },
+			  {
+				"jsonPath": "$.data.data[*].grf_5",
+				"name": "Ven"
+			  },
+			  {
+				"jsonPath": "$.data.data[*].grf_6",
+				"name": "Sab"
+			  },
+			  {
+				"jsonPath": "$.data.data[*].grf_7",
+				"name": "Dom"
+			  }
+			],
+			"headers": [],
+			"method": "GET",
+			"params": [
+			  [
+				"id",
+				"${ValoreID}"
+			  ],
+			  [
+				"interval",
+				"hour"
+			  ],
+			  [
+				"start",
+				"1546297200000"
+			  ],
+			  [
+				"end",
+				"1577746800000"
+			  ],
+			  [
+				"skipmissing",
+				"0"
+			  ],
+			  [
+				"limitinterval",
+				"1"
+			  ],
+			  [
+				"slots",
+				"3"
+			  ],
+			  [
+				"getDelta",
+				"true"
+			  ],
+			  [
+				"season",
+				"Estate"
+			  ]
+			],
+			"queryParams": "",
+			"refId": "A",
+			"urlPath": "/etl/medieStagionale"
+		  }
+		],
+		"title": "Consumo medio giornaliero vs. ora: stagione estiva",
+		"transformations": [],
+		"type": "barchart"
+	  },
+	  {
+		"datasource": "OnlyRead",
+		"fieldConfig": {
+		  "defaults": {
+			"color": {
+			  "mode": "palette-classic"
+			},
+			"custom": {
+			  "axisLabel": "Energia [KWh]",
+			  "axisPlacement": "auto",
+			  "axisSoftMin": 0,
+			  "fillOpacity": 80,
+			  "gradientMode": "none",
+			  "hideFrom": {
+				"legend": false,
+				"tooltip": false,
+				"viz": false
+			  },
+			  "lineWidth": 1
+			},
+			"decimals": 2,
+			"mappings": [],
+			"thresholds": {
+			  "mode": "absolute",
+			  "steps": [
+				{
+				  "color": "green",
+				  "value": null
+				},
+				{
+				  "color": "red",
+				  "value": 80
+				}
+			  ]
+			},
+			"unit": "none"
+		  },
+		  "overrides": []
+		},
+		"gridPos": {
+		  "h": 7,
+		  "w": 24,
+		  "x": 0,
+		  "y": 32
+		},
+		"id": 13,
+		"options": {
+		  "barWidth": 0.97,
+		  "groupWidth": 0.7,
+		  "legend": {
+			"calcs": [
+			  "sum"
+			],
+			"displayMode": "list",
+			"placement": "bottom"
+		  },
+		  "orientation": "auto",
+		  "showValue": "auto",
+		  "stacking": "none",
+		  "text": {},
+		  "tooltip": {
+			"mode": "single"
+		  }
+		},
+		"pluginVersion": "7.5.5",
+		"targets": [
+		  {
+			"cacheDurationSeconds": 300,
+			"fields": [
+			  {
+				"jsonPath": "$.data.data[*].indice",
+				"name": "time",
+				"type": "string"
+			  },
+			  {
+				"jsonPath": "$.data.data[*].grf_1",
+				"name": "Lun"
+			  },
+			  {
+				"jsonPath": "$.data.data[*].grf_2",
+				"name": "Mar"
+			  },
+			  {
+				"jsonPath": "$.data.data[*].grf_3",
+				"name": "Mer"
+			  },
+			  {
+				"jsonPath": "$.data.data[*].grf_4",
+				"name": "Gio"
+			  },
+			  {
+				"jsonPath": "$.data.data[*].grf_5",
+				"name": "Ven"
+			  },
+			  {
+				"jsonPath": "$.data.data[*].grf_6",
+				"name": "Sab"
+			  },
+			  {
+				"jsonPath": "$.data.data[*].grf_7",
+				"name": "Dom"
+			  }
+			],
+			"headers": [],
+			"method": "GET",
+			"params": [
+			  [
+				"id",
+				"${ValoreID}"
+			  ],
+			  [
+				"interval",
+				"hour"
+			  ],
+			  [
+				"start",
+				"1546297200000"
+			  ],
+			  [
+				"end",
+				"1577746800000"
+			  ],
+			  [
+				"skipmissing",
+				"0"
+			  ],
+			  [
+				"limitinterval",
+				"1"
+			  ],
+			  [
+				"slots",
+				"3"
+			  ],
+			  [
+				"getDelta",
+				"true"
+			  ],
+			  [
+				"season",
+				"Inverno"
+			  ]
+			],
+			"queryParams": "",
+			"refId": "A",
+			"urlPath": "/etl/medieStagionale"
+		  }
+		],
+		"title": "Consumo medio giornaliero vs. ora: stagione invernale",
+		"transformations": [],
+		"type": "barchart"
+	  },
+	  {
+		"datasource": null,
+		"gridPos": {
+		  "h": 8,
+		  "w": 12,
+		  "x": 0,
+		  "y": 39
+		},
+		"id": 12,
+		"options": {
+		  "content": "# Cose che mancano:\n\nRendere scelta anno dinamica\n",
+		  "mode": "markdown"
+		},
+		"pluginVersion": "8.1.5",
+		"targets": [
+		  {
+			"cacheDurationSeconds": 300,
+			"fields": [
+			  {
+				"jsonPath": ""
+			  }
+			],
+			"method": "GET",
+			"queryParams": "",
+			"refId": "A",
+			"urlPath": ""
+		  }
+		],
+		"timeFrom": null,
+		"timeShift": null,
+		"title": "Panel Title",
+		"type": "text"
+	  }
+	],
+	"refresh": false,
+	"schemaVersion": 30,
+	"style": "dark",
+	"tags": [],
+	"templating": {
+	  "list": [
+		{
+		  "allValue": null,
+		  "current": {
+			"selected": false,
+			"text": "519",
+			"value": "519"
+		  },
+		  "datasource": "nodejs-digital-ocean-write",
+		  "definition": "$.data[*].meta.feeds[*].id",
+		  "description": null,
+		  "error": null,
+		  "hide": 0,
+		  "includeAll": false,
+		  "label": "Selezionare ID valore",
+		  "multi": false,
+		  "name": "ValoreID",
+		  "options": [],
+		  "query": {
+			"cacheDurationSeconds": 300,
+			"fields": [
+			  {
+				"jsonPath": "$.data[*].meta.feeds[*].id"
+			  }
+			],
+			"method": "GET",
+			"queryParams": "",
+			"urlPath": "/etl/feeds"
+		  },
+		  "refresh": 1,
+		  "regex": "",
+		  "skipUrlSync": false,
+		  "sort": 3,
+		  "type": "query"
+		}
+	  ]
+	},
+	"time": {
+	  "from": "2018-12-31T23:00:00.000Z",
+	  "to": "2019-12-31T22:59:59.000Z"
+	},
+	"timepicker": {
+	  "hidden": false
+	},
+	"timezone": "",
+	"title": "Profili medi giornalieri/settimanali",
+	"version": 92
+  }

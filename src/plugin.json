@@ -1,0 +1,103 @@
+{
+  "$schema": "https://raw.githubusercontent.com/grafana/grafana/master/docs/sources/developers/plugins/plugin.schema.json",
+  "type": "app",
+  "name": "Gestione impianto di monitoraggio",
+  "id": "struttureenergia-inputfeeds-app",
+
+  "info": {
+    "description": "",
+    "author": {
+      "name": "Strutture Energia"
+    },
+    "keywords": ["misure", "valori", "strutture energia", "rre"],
+    "logos": {
+      "small": "img/logo.svg",
+      "large": "img/logo.svg"
+    },
+    "links": [
+      { "name": "Website", "url": "https://www.strutture-energia.it/" },
+      { "name": "Rete Risparmio Energia", "url": "http://reterisparmioenergia.it/" },
+      { "name": "License", "url": "https://github.com/grafana/grafana-starter-app/blob/master/LICENSE" }
+    ],
+    "screenshots": [],
+    "version": "%VERSION%",
+    "updated": "%TODAY%"
+  },
+
+  "includes": [
+    {
+      "type": "page",
+      "name": "Rete elettrica",
+      "path": "/a/struttureenergia-inputfeeds-app/?tab=tree",
+      "role": "Viewer",
+      "addToNav": true
+    },
+    {
+      "type": "page",
+      "name": "Fotovoltaico",
+      "path": "/a/struttureenergia-inputfeeds-app/?tab=fotovoltaico",
+      "role": "Viewer",
+      "addToNav": true
+    },
+    {
+      "type": "page",
+      "name": "Pompa di calore",
+      "path": "/a/struttureenergia-inputfeeds-app/?tab=pompadicalore",
+      "role": "Viewer",
+      "addToNav": true
+    },
+    {
+      "type": "page",
+      "name": "Configurazione",
+      "path": "/plugins/struttureenergia-inputfeeds-app/?page=config",
+      "role": "Admin",
+      "addToNav": true
+    },
+    {
+      "type": "dashboard",
+      "name": "Real-time",
+      "path": "dashboards/real-time.json"
+    },
+    {
+      "type": "dashboard",
+      "name": "Analisi per destinazioni d'uso ed aree funzionali",
+      "path": "dashboards/dest-and-areas-analysis.json"
+    },
+    {
+      "type": "dashboard",
+      "name": "Profili medi giornalieri e settimanali",
+      "path": "dashboards/avg-profiles.json"
+    },
+    {
+      "type": "dashboard",
+      "name": "Dispositivi",
+      "path": "dashboards/devices.json"
+    },
+    {
+      "type": "dashboard",
+      "name": "Previsioni",
+      "path": "dashboards/forecasts.json"
+    },
+    {
+      "type": "dashboard",
+      "name": "Pompa calore",
+      "path": "dashboards/heat-pump.json"
+    },
+    {
+      "type": "dashboard",
+      "name": "Home",
+      "path": "dashboards/home.json"
+    },
+    {
+      "type": "dashboard",
+      "name": "Fotovoltaico",
+      "path": "dashboards/photovoltaic.json"
+    }
+  ],
+
+  "dependencies": {
+    "grafanaDependency": ">=7.0.0",
+    "grafanaVersion": "7.0.0",
+    "plugins": []
+  }
+}

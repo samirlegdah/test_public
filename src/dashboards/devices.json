@@ -1,0 +1,215 @@
+{
+	"annotations": {
+	  "list": [
+		{
+		  "builtIn": 1,
+		  "datasource": "-- Grafana --",
+		  "enable": true,
+		  "hide": true,
+		  "iconColor": "rgba(0, 211, 255, 1)",
+		  "name": "Annotations & Alerts",
+		  "target": {
+			"limit": 100,
+			"matchAny": false,
+			"tags": [],
+			"type": "dashboard"
+		  },
+		  "type": "dashboard"
+		}
+	  ]
+	},
+	"editable": true,
+	"gnetId": null,
+	"graphTooltip": 0,
+	"links": [],
+	"panels": [
+	  {
+		"datasource": "Main Org. Data Source Only-Read",
+		"fieldConfig": {
+		  "defaults": {
+			"color": {
+			  "mode": "thresholds"
+			},
+			"custom": {
+			  "align": null,
+			  "displayMode": "auto",
+			  "filterable": false
+			},
+			"links": [],
+			"mappings": [],
+			"thresholds": {
+			  "mode": "absolute",
+			  "steps": [
+				{
+				  "color": "green",
+				  "value": null
+				},
+				{
+				  "color": "red",
+				  "value": 80
+				}
+			  ]
+			},
+			"unit": "none"
+		  },
+		  "overrides": []
+		},
+		"gridPos": {
+		  "h": 24,
+		  "w": 24,
+		  "x": 0,
+		  "y": 0
+		},
+		"id": 6,
+		"options": {
+		  "showHeader": true,
+		  "sortBy": [
+			{
+			  "desc": false,
+			  "displayName": "Dispositivo"
+			}
+		  ]
+		},
+		"pluginVersion": "8.1.2",
+		"targets": [
+		  {
+			"cacheDurationSeconds": 300,
+			"fields": [
+			  {
+				"jsonPath": "$[*].tag",
+				"name": "Dispositivo"
+			  },
+			  {
+				"jsonPath": "$[*].name",
+				"name": "Nome Misura"
+			  },
+			  {
+				"jsonPath": "$[*].id",
+				"name": "ID Misura",
+				"type": "number"
+			  },
+			  {
+				"jsonPath": "$[*].value",
+				"name": "Ultimo val",
+				"type": "number"
+			  },
+			  {
+				"jsonPath": "$[*].unit",
+				"name": "um"
+			  }
+			],
+			"method": "GET",
+			"queryParams": "",
+			"refId": "A",
+			"urlPath": ""
+		  }
+		],
+		"timeFrom": null,
+		"timeShift": null,
+		"title": "Elenco dispositivi in ufficio",
+		"transformations": [],
+		"type": "table"
+	  },
+	  {
+		"datasource": "lista dispositivi casa",
+		"fieldConfig": {
+		  "defaults": {
+			"color": {
+			  "mode": "thresholds"
+			},
+			"custom": {
+			  "align": null,
+			  "displayMode": "auto",
+			  "filterable": false
+			},
+			"links": [],
+			"mappings": [],
+			"thresholds": {
+			  "mode": "absolute",
+			  "steps": [
+				{
+				  "color": "green",
+				  "value": null
+				},
+				{
+				  "color": "red",
+				  "value": 80
+				}
+			  ]
+			},
+			"unit": "none"
+		  },
+		  "overrides": []
+		},
+		"gridPos": {
+		  "h": 20,
+		  "w": 24,
+		  "x": 0,
+		  "y": 24
+		},
+		"id": 5,
+		"options": {
+		  "showHeader": true,
+		  "sortBy": [
+			{
+			  "desc": false,
+			  "displayName": "Dispositivo"
+			}
+		  ]
+		},
+		"pluginVersion": "8.1.2",
+		"targets": [
+		  {
+			"cacheDurationSeconds": 300,
+			"fields": [
+			  {
+				"jsonPath": "$[*].tag",
+				"name": "Dispositivo"
+			  },
+			  {
+				"jsonPath": "$[*].name",
+				"name": "Nome Misura"
+			  },
+			  {
+				"jsonPath": "$[*].id",
+				"name": "ID Misura",
+				"type": "number"
+			  },
+			  {
+				"jsonPath": "$[*].value",
+				"name": "Ultimo val",
+				"type": "number"
+			  },
+			  {
+				"jsonPath": "$[*].unit",
+				"name": "um"
+			  }
+			],
+			"method": "GET",
+			"queryParams": "",
+			"refId": "A",
+			"urlPath": ""
+		  }
+		],
+		"timeFrom": null,
+		"timeShift": null,
+		"title": "Elenco dispositivi a casa",
+		"transformations": [],
+		"type": "table"
+	  }
+	],
+	"refresh": "5s",
+	"schemaVersion": 30,
+	"style": "dark",
+	"tags": [],
+	"templating": {
+	  "list": []
+	},
+	"time": {
+	  "from": "now-6h",
+	  "to": "now"
+	},
+	"timepicker": {},
+	"timezone": "",
+	"title": "Lista dei Dispositivi"
+  }

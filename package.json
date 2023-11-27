@@ -1,0 +1,43 @@
+{
+  "name": "simple-app",
+  "version": "1.0.0",
+  "description": "Grafana App Plugin Template",
+  "scripts": {
+    "build": "grafana-toolkit plugin:build",
+    "test": "grafana-toolkit plugin:test",
+    "dev": "grafana-toolkit plugin:dev",
+    "watch": "grafana-toolkit plugin:dev --watch",
+    "sign": "grafana-toolkit plugin:sign",
+    "start": "yarn watch",
+    "fix": "grafana-toolkit --fix"
+  },
+  "author": "Grafana Labs",
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "@grafana/data": "latest",
+    "@grafana/toolkit": "latest"
+  },
+  "engines": {
+    "node": ">=14"
+  },
+  "dependencies": {
+    "@grafana/runtime": "^8.1.2",
+    "@types/react-modal": "^3.12.1",
+    "@types/react-select": "^4.0.17",
+    "@types/react-sortable-tree": "^0.3.14",
+    "bootstrap": "^5.1.3",
+    "grafana": "^1.0.1",
+    "react-autocomplete": "^1.8.1",
+    "react-bootstrap": "^2.2.3",
+    "react-charts": "^2.0.0-beta.7",
+    "react-contexify": "^5.0.0",
+    "react-csv-reader": "^3.3.1",
+    "react-dnd": "^7.7.0",
+    "react-modal": "^3.14.3",
+    "react-search-autocomplete": "^5.4.2",
+    "react-sortable-tree": "^2.8.0",
+    "recharts": "^2.1.4",
+    "semantic-ui-css": "^2.4.1",
+    "semantic-ui-react": "^2.1.2"
+  }
+}
